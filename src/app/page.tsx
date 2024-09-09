@@ -4,7 +4,7 @@ import AboutSection from "./_components/about-section";
 import ExperienceSection from "./_components/experience-section";
 import SkillsSection from "./_components/skills";
 import Navbar from "@/components/navbar";
-import Timeline, { TimelineItem } from "@/components/timeline";
+import Timeline from "@/components/timeline";
 
 export const metadata: Metadata = {
     title: "[K] Home",
