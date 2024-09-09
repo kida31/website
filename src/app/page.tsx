@@ -32,12 +32,13 @@ const timelineItems = [
 export default function HomePage() {
 
     return (
-        <div className="flex flex-col items-center min-h-screen justify-between p-24 bg-base-300">
+        <div className="flex flex-col items-center min-h-screen justify-between p-24 bg-base-100">
             <Navbar />
             <h1 className="prose lg:prose-xl">My Name</h1>
             <AboutSection />
             <SkillsSection />
             <ExperienceSection />
+            <Timeline items={timelineItems} />
             <div className="container grid grid-flow-col auto-cols-max gap-8 justify-center">
                 <DomainCard
                     title="Development"
@@ -46,7 +47,6 @@ export default function HomePage() {
                 <DomainCard title="Games" description="This is games stuff" />
                 <DomainCard title="Music" description="Hello this is some music" />
             </div>
-            <Timeline items={timelineItems} />
         </div>
     );
 }
