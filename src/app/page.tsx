@@ -4,13 +4,33 @@ import AboutSection from "./_components/about-section";
 import ExperienceSection from "./_components/experience-section";
 import SkillsSection from "./_components/skills";
 import Navbar from "@/components/navbar";
+import Timeline, { TimelineItem } from "@/components/timeline";
 
 export const metadata: Metadata = {
     title: "[K] Home",
     description: "Personal Website",
 };
 
+const timelineItems = [
+    {
+        time: "2021",
+        title: "[Example] Started working at Company",
+        content: "[Example] I started working at Company as a developer",
+    },
+    {
+        time: "2020",
+        title: "[Example] Graduated from University",
+        content: "[Example] I graduated from University with a degree in Computer Science",
+    },
+    {
+        time: "2018",
+        title: "[Example] Started University",
+        content: "[Example] I started University and began studying Computer Science",
+    }
+]
+
 export default function HomePage() {
+
     return (
         <div className="flex flex-col items-center min-h-screen justify-between p-24 bg-base-300">
             <Navbar />
@@ -26,6 +46,7 @@ export default function HomePage() {
                 <DomainCard title="Games" description="This is games stuff" />
                 <DomainCard title="Music" description="Hello this is some music" />
             </div>
+            <Timeline items={timelineItems} />
         </div>
     );
 }
